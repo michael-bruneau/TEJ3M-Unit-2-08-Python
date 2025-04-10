@@ -19,7 +19,7 @@ UNIT_ANGLE = 0.0027
 angle = 0
 
 # setup
-potentiometer = analogio.AnalogIn(board.GP14)
+potentiometer = analogio.AnalogIn(board.GP26)
 
 # create a PWMOut object on Pin GP12.
 pwm = pwmio.PWMOut(board.GP12 , duty_cycle=2 ** 15, frequency=50)
