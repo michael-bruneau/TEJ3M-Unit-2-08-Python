@@ -36,5 +36,5 @@ while True:
     #if 
     # Moves micro sevro
     #for angle in range(180, 0, -5): # 180 - 0 degrees, 5 degrees at a time
-    my_servo.write.angle = angle
+    my_servo.angle = angle
     #time.sleep(servo_delay)
