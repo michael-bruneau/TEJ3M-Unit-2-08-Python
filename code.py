@@ -33,4 +33,4 @@ while True:
     angle = potentiometer.value * UNIT_ANGLE
 
     # Moves micro sevro
-    my_servo.write.angle = angle
+    my_servo.angle = angle
