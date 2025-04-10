@@ -19,6 +19,7 @@ UNIT_ANGLE = 0.0027
 servo_angle = 0
 biggest_angle = 0
 wiper_output = 0
+get_voltage = 3.3 / 65535
 
 # setup
 potentiometer = analogio.AnalogIn(board.GP26)
@@ -32,11 +33,12 @@ my_servo = servo.Servo(pwm)
 # loop
 while True:
     # get wiper output
-    wiper_output = potentiometer.value 
+    wiper_output = potentiometer.value * get_voltage
+    print(wiper_output)
 
     # calculates angle
     servo_angle = wiper_output * UNIT_ANGLE
-    print(servo_angle)
+    #print(servo_angle)
     
     #if 
     # Moves micro sevro
