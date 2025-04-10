@@ -16,7 +16,7 @@ import analogio
 # variables and constants
 servo_delay = 1
 UNIT_ANGLE = 0.0027
-angle = 0
+servo_angle = 0
 biggest_angle = 0
 
 # setup
@@ -31,10 +31,10 @@ my_servo = servo.Servo(pwm)
 # loop
 while True:
     # calculates angle
-    angle = potentiometer.value * UNIT_ANGLE
+    servo_angleangle = potentiometer.value * UNIT_ANGLE
     
     #if 
     # Moves micro sevro
     #for angle in range(180, 0, -5): # 180 - 0 degrees, 5 degrees at a time
-    my_servo.angle = angle
+    my_servo.angle = servo_angle
     #time.sleep(servo_delay)
