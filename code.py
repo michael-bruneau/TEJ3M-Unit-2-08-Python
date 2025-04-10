@@ -14,10 +14,11 @@ import analogio
 
 
 # variables and constants
-servo_delay = 1
+servo_delay = 2
 UNIT_ANGLE = 0.0027
 servo_angle = 0
 biggest_angle = 0
+wiper_output = 0
 
 # setup
 potentiometer = analogio.AnalogIn(board.GP26)
@@ -30,11 +31,15 @@ my_servo = servo.Servo(pwm)
 
 # loop
 while True:
+    # get wiper output
+    wiper_output = potentiometer.value 
+
     # calculates angle
-    servo_angleangle = potentiometer.value * UNIT_ANGLE
+    servo_angle = wiper_output * UNIT_ANGLE
+    print(servo_angle)
     
     #if 
     # Moves micro sevro
     #for angle in range(180, 0, -5): # 180 - 0 degrees, 5 degrees at a time
     my_servo.angle = servo_angle
-    #time.sleep(servo_delay)
+    time.sleep(servo_delay)
