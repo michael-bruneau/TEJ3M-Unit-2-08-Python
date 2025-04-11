@@ -12,7 +12,7 @@ import pwmio
 from adafruit_motor import servo
 import analogio
 
-print("hello")
+
 # variables and constants
 servo_delay = 2
 UNIT_ANGLE = 0.0027
