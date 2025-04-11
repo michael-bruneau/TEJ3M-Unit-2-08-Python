@@ -15,7 +15,7 @@ import analogio
 print("hello")
 # variables and constants
 servo_delay = 2
-UNIT_ANGLE = 0.0026
+UNIT_ANGLE = 0.0027
 servo_angle = 0
 biggest_angle = 0
 wiper_output = 0
