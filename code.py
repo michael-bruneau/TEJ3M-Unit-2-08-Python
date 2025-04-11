@@ -12,7 +12,7 @@ import pwmio
 from adafruit_motor import servo
 import analogio
 
-
+print("hello")
 # variables and constants
 servo_delay = 2
 UNIT_ANGLE = 0.0027
@@ -33,11 +33,10 @@ my_servo = servo.Servo(pwm)
 while True:
     # get wiper output
     wiper_output = potentiometer.value
-    print(wiper_output)
 
     # calculates angle
     servo_angle = wiper_output * UNIT_ANGLE
-    #print(servo_angle)
+    print(servo_angle)
     
     #if 
     # Moves micro sevro
