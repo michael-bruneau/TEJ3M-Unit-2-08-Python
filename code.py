@@ -15,7 +15,7 @@ import analogio
 print("hello")
 # variables and constants
 servo_delay = 2
-UNIT_ANGLE = 0.0027
+UNIT_ANGLE = 0.0026
 servo_angle = 0
 biggest_angle = 0
 wiper_output = 0
@@ -36,10 +36,7 @@ while True:
 
     # calculates angle
     servo_angle = wiper_output * UNIT_ANGLE
-    print(servo_angle)
-    
-    #if 
-    # Moves micro sevro
-    #for angle in range(180, 0, -5): # 180 - 0 degrees, 5 degrees at a time
+
+    # turns servo
     my_servo.angle = servo_angle
     time.sleep(servo_delay)
